@@ -53,11 +53,11 @@ export default class Carrousel extends React.Component {
         {this.props.imgUrls.length > 1 ? (
           <div>
             <i
-              className="fas fa-chevron-left"
+              class="fas fa-chevron-left" id="fa-chevron-left"
               onClick={() => this.previousSlide()}
             ></i>
             <i
-              className="fas fa-chevron-right"
+              class="fas fa-chevron-right" id="fa-chevron-right"
               onClick={() => this.nextSlide()}
             ></i>
           </div>

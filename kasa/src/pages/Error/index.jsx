@@ -6,7 +6,7 @@ import "./Error.css"
 export default class Error extends React.Component {
   render() {
     return (
-      <main className="Error">
+      <main className="Error" id="Error">
         <p className="Error-code">404</p>
 
         <p className="Error-message">

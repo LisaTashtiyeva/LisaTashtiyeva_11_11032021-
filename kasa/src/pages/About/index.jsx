@@ -8,7 +8,7 @@ import Collapse from "../../components/Collapse"
 export default class About extends React.Component {
   render() {
     return (
-      <main className="About">
+      <main className="About" id="About">
         <Banner imgSrc={BannerAbout} altTxt="paysage montagne" />
         <div className="collapses collapses-about">
           {aboutText.map(({ title, content }) => (

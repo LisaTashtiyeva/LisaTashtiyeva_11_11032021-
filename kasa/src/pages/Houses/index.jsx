@@ -74,7 +74,7 @@ class Houses extends React.Component {
       } = this.state.datas
 
       return (
-        <main className="Houses">
+        <main className="Houses" id= "Houses">
           <Carrousel imgUrls={pictures} />
           <Infos
             location={location}

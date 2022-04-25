@@ -7,7 +7,7 @@ import Galery from "../../components/Galery"
 export default class Home extends React.Component {
   render() {
     return (
-      <main className="Home">
+      <main className="Home" id="Home">
         <Banner
           imgSrc={BannerHome}
           altTxt="paysage terre et mer"

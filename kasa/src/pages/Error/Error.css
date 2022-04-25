@@ -1,6 +1,10 @@
 .Error {
   background-color: white;
   color: #ff6060;
+  max-width: 1440px;
+  justify-content: space-between;
+  margin: 3% auto;
+  padding: 0 8%;
 }
 .Error-code {
   width: 100%;
