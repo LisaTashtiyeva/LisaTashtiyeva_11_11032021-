@@ -36,10 +36,8 @@ class Houses extends React.Component {
               datas: itemToShow,
             })
           } else{
-            this.setState({
-                error: true,
-            })
-          }
+                throw Error(itemToShow);
+            }
         }
       ).catch((error) => {
         this.setState({ error })
