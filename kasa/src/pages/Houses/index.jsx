@@ -19,17 +19,25 @@ class Houses extends React.Component {
 
   getData(url) {
     fetch(url)
-      .then((response) => response.json())
-      .then(
+      .then((response) => {
+      if (response.status >= 200 && response.status <= 299) {
+        return response.json();
+      } else {
+        throw Error(response.statusText);
+      }
+    }).then(
         (jsonResponse) => {
 
           const idInUrl = this.props.params.id
           const itemToShow = jsonResponse.find((item) => item.id === idInUrl)
-          
           if (itemToShow) {
             this.setState({
               isLoaded: true,
               datas: itemToShow,
+            })
+          } else{
+            this.setState({
+                error: true,
             })
           }
         }
@@ -45,9 +53,8 @@ class Houses extends React.Component {
 
   render() {
     const { error, isLoaded } = this.state
-
     if (error) {
-      return (
+        return (
         <div>
           <Error />
         </div>
